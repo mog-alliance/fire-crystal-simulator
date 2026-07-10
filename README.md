@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fire Crystal Simulator
 
-## Getting Started
+Whiteout Survival（ホワイトアウト・サバイバル）の火晶スーパー精錬シミュレーターです。
 
-First, run the development server:
+イベント期間と目標精錬火晶数を入力すると、ゲーム内仕様（スーパー精錬・通常精錬・月曜リセット・初回半額など）を考慮し、必要な火晶数と最適な精錬スケジュールをシミュレーションします。
+
+## Features
+
+* 必要火晶数の計算
+* スーパー精錬の最適化
+* 月曜リセット対応
+* 初回半額対応
+* 成功確率シミュレーション
+* 最適スケジュール提案
+
+## Tech Stack
+
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Roadmap
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* [x] Next.js project setup
+* [ ] Game rule definitions
+* [ ] Refinement simulation engine
+* [ ] Probability simulation
+* [ ] Planner UI
+* [ ] Result visualization
+* [ ] Mobile optimization
+* [ ] Vercel deployment
 
-## Learn More
+## Disclaimer
 
-To learn more about Next.js, take a look at the following resources:
+This project is an unofficial fan-made tool for Whiteout Survival.
+Whiteout Survival and all related assets are the property of their respective owners.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
