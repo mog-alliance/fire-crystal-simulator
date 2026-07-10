@@ -4,10 +4,15 @@ import { useState } from "react";
 import { createRefinementPlan } from "@/lib/planner/refinementPlanner";
 import { RefinementPlan } from "@/types/refinement";
 import ResultCard from "./ResultCard";
+import { DateRange } from "react-day-picker";
+import DateRangePicker from "./DateRangePicker";
 
 export default function PlannerForm() {
-  const [target, setTarget] = useState("");
-  const [plan, setPlan] = useState<RefinementPlan | null>(null);
+const [range, setRange] = useState<DateRange | undefined>();
+const [target, setTarget] = useState("");
+const [plan, setPlan] = useState<RefinementPlan | null>(null);
+
+const today = new Date().toISOString().split("T")[0];
 
   const handleCalculate = () => {
     const value = Number(target);
@@ -25,7 +30,13 @@ export default function PlannerForm() {
       <h2 className="mb-4 text-xl font-semibold">
         精錬プラン作成
       </h2>
-
+<label className="block mb-2">
+  達成期間
+</label>
+<DateRangePicker
+  range={range}
+  onChange={setRange}
+/>
       <label className="block mb-2">
         目標精錬火晶数
       </label>
